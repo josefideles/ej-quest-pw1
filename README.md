@@ -1,57 +1,53 @@
-# EJ Quest — AB1
+# EJ Quest
 
-Protótipo visual para Programação Web I. A proposta é organizar trilhas de conhecimento para facilitar a integração de membros de empresas juniores, tendo a RocketJR como contexto de aplicação proposto.
+Protótipo visual de uma plataforma gamificada de gestão do conhecimento e capacitação para empresas juniores, desenvolvido para a AB1 de Programação Web I.
 
-## Tecnologias e pré-requisitos
+## 1. Quem precisa da solução?
 
-React, JavaScript, Vite, CSS puro e cinco imagens SVG locais. Use **Node.js 22.12 ou superior** e npm.
+Empresas juniores são o público-alvo. A RocketJR é o contexto proposto para organizar conteúdos e apoiar a integração de membros. Trata-se de uma proposta acadêmica, sem pesquisa ou validação institucional declarada.
 
-## Executar
+## 2. Qual problema resolve?
 
-Abra um terminal dentro de `ej-quest-ab1/`:
+Materiais dispersos dificultam o acesso ao conhecimento e geram repetição de orientações. A proposta completa é organizar esses materiais em trilhas de aprendizagem. Esta entrega demonstra apenas a interface, sem disponibilizar conteúdos ou acompanhar o aprendizado.
+
+## 3. Como funciona o protótipo?
+
+- **Header:** nome EJ Quest e 200 XP ilustrativos.
+- **Jornada:** quatro paradas com imagens locais, números, títulos e descrições: Conheça a EJ, Ferramentas de trabalho, Processos e projetos e Próximos passos.
+- **Perfil:** foto de Gabriel Fideles, cargo Membro, organização RocketJR, XP e emblemas demonstrativos.
+- **Navbar:** alterna entre Jornada e Perfil; Ranking e Desafios estão desativados, com “Em breve”.
+
+## Tecnologias
+
+- **React e JavaScript:** componentes, dados e navegação com `useState`.
+- **JSX:** estrutura da interface.
+- **CSS puro:** estilos, Flexbox, Grid nos emblemas e media queries.
+- **Vite:** desenvolvimento e build.
+- **Imagens locais SVG e PNG:** ilustrações e foto do perfil.
+
+## Requisitos acadêmicos atendidos
+
+| Requisito | Implementação |
+| --- | --- |
+| Divisão do layout | Header, conteúdo principal e Navbar |
+| Estilização de textos | Fonte, tamanho, peso e cor |
+| Estilização de imagens | Dimensões, bordas e formato |
+| Flexbox | Alinhamento e distribuição dos elementos |
+| React e JSX | Construção da interface |
+| Componentes | Header, Navbar e Parada reutilizável |
+
+## Como executar
+
+Requer Node.js 22.12 ou superior e npm. Dentro de `ej-quest-ab1/`:
 
 ```bash
-npm ci
-npm run dev
+npm ci            # Instalar dependências
+npm run dev       # Iniciar desenvolvimento
+npm run build     # Gerar build em dist/
 ```
 
-Abra o endereço indicado pelo terminal, normalmente `http://localhost:5173`.
+Abra o endereço informado pelo Vite no terminal.
 
-```bash
-npm run build
-npm run preview
-```
+## Limitações
 
-O build gera `dist/`. O preview permite conferir essa versão localmente, normalmente em `http://localhost:4173`.
-
-## Disponível nesta versão
-
-- Jornada com quatro paradas visuais e imagens locais.
-- Perfil de Fideles, Membro da RocketJR.
-- Navegação entre Jornada e Perfil.
-- Ranking e Desafios desativados com “Em breve”.
-
-XP é ilustrativo e fixo em 200. Não há abertura de conteúdos, progressão, quizzes, login, APIs, banco de dados ou persistência. O material não é apresentado como processo oficial da RocketJR.
-
-## Documentação
-
-- [PLANEJAMENTO.md](./PLANEJAMENTO.md): especificação SDD, critérios e validação.
-- [EXPLICACAO.md](./EXPLICACAO.md): questões do projeto, conceitos, personalização e roteiro de apresentação.
-
-## Validação realizada
-
-`npm install` e `npm run build` foram executados com sucesso. Não houve ferramenta de navegador disponível nesta sessão: a navegação interativa, imagens renderizadas, teclado e layout em celular/desktop precisam de conferência manual. Não foi instalado framework de testes.
-
-## Pendências: GitHub e apresentação online
-
-A publicação no GitHub e uma URL online são requisitos ainda pendentes. Nenhum repositório remoto ou site foi criado nesta tarefa.
-
-Para publicar posteriormente:
-
-1. Crie um repositório no GitHub e envie os arquivos desta pasta, incluindo `package-lock.json`, respeitando `.gitignore`. Não envie `node_modules/` ou `dist/`.
-2. Se usar o repositório que contém os outros projetos, configure **`ej-quest-ab1` como diretório raiz** do serviço de hospedagem. Se publicar somente esta pasta em um repositório próprio, a raiz é a própria pasta do repositório.
-3. Em uma hospedagem estática compatível com Vite, use Node.js 22.12+, instalação `npm ci`, comando de build `npm run build` e diretório de saída `dist`.
-4. Para GitHub Pages, configure uma ação que instale, gere e publique o conteúdo de `dist`; não publique apenas o código JSX. O Vite já utiliza `base: './'`, compatível com assets relativos em subdiretórios.
-5. Abra o endereço gerado, confira a navegação e registre as URLs reais de repositório e site antes da entrega acadêmica.
-
-Evoluções futuras possíveis: conteúdo acessível nas paradas, progressão real, ranking, desafios e backend.
+Dados estáticos, sem backend, banco de dados, login ou progressão funcional. As paradas não abrem conteúdos; XP e emblemas não são atualizados pelas ações do usuário.
